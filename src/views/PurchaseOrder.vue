@@ -240,7 +240,10 @@
       <div class="table-column">
         <div class="table-row">
           <div class="table-block">
-            <span class="table-block-title table-block-title--clickable" @click="visibleCurrencies = !visibleCurrencies">Exchange rate</span>
+            <div class="currencies-table-header">
+              <span class="table-block-title">Exchange rate</span>
+              <span class="table-block-title table-block-title--clickable" icon="el-icon-caret-top" @click="visibleCurrencies = !visibleCurrencies">+</span>
+            </div>
             <div class="table-row" v-if="visibleCurrencies">
               <div class="table-block table-block--wide">
                 <span class="table-block-title">USD:UAH</span>
@@ -525,7 +528,8 @@ export default {
     padding: 24px;
     border-radius: 10px;
     margin-bottom: 50px;
-    width: fit-content;
+    width: 734px;
+    /* width: fit-content; */
   }
   .table-block {
     display: flex;
@@ -587,5 +591,10 @@ export default {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+  }
+  .currencies-table-header {
+    display: flex;
+    justify-content: space-between;
+    width: 734px;
   }
 </style>
